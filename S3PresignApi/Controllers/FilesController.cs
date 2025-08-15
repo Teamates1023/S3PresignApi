@@ -14,8 +14,8 @@ namespace S3PresignApi.Controllers
 
         public FilesController(IConfiguration cfg)
         {
-            _bucket = cfg["BUCKET"] ?? throw new Exception("BUCKET env missing");
-            _region = RegionEndpoint.GetBySystemName(cfg["AWS_REGION"] ?? "ap-northeast-1");
+            _bucket = cfg["AWS:Bucket"] ?? throw new Exception("BUCKET env missing");
+            _region = RegionEndpoint.GetBySystemName(cfg["AWS:Region"] ?? "ap-northeast-1");
         }
 
         // 產生上傳(PUT)的 pre-signed URL
