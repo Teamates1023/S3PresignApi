@@ -22,6 +22,11 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.MapGet("/healthz", () => Results.Ok(new { status = "ok" }))
+   .WithName("Healthz")
+   .WithTags("System")
+   .AllowAnonymous();
+
 app.MapControllers();
 
 app.Run();
