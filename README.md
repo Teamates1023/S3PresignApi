@@ -1,7 +1,7 @@
 # S3PresignApi
 
 用 C# / .NET 8 實作的 S3 Pre-Signed URL 產生服務：\
-客戶端向 API 取得短時效的上傳/下載 URL，不需要持有 AWS 金鑰，之後直接連 S3 完成檔案傳輸 \
+客戶端向 API 取得短時效的上傳/下載 URL，不需要持有 AWS 金鑰，直接連 S3 完成檔案傳輸 \
 技術：ASP.NET Core、AWS SDK for .NET (S3)、Docker、ECR、ECS Fargate、CloudWatch Logs\
 \
 使用S3PresignApi有下列幾項優點 - \
